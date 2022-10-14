@@ -1,7 +1,7 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import letterboxdLogo from "C:/Users/derek/Documents/Code/Web Devlopement/My Work/Letterboxd_Progression_Website/letterboxd-progression/src/images/letterboxd_logo.png";
-import settingsIcon from "C:/Users/derek/Documents/Code/Web Devlopement/My Work/Letterboxd_Progression_Website/letterboxd-progression/src/images/settings_icon.png";
-import profilePicture from "C:/Users/derek/Documents/Code/Web Devlopement/My Work/Letterboxd_Progression_Website/letterboxd-progression/src/images/profile_picture.JPG"
+import letterboxdLogo from "../images/letterboxd_logo.png";
+import settingsIcon from "../images/settings_icon.png";
+import profilePicture from "../images/profile_picture.JPG"
 
 export default function Navbar() {
     const path = window.location.pathname;
