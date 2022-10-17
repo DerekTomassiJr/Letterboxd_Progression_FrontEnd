@@ -1,3 +1,11 @@
+import TalentCard from "../components/TalentCard";
+import "../stylesheets/Directors.css"
+
 export default function Home() {
-    return <h1>Directors</h1>
+    return (
+        <div id="DirectorPageContent">
+            <h1 id="PageHeader">Directors Filmography</h1>
+            <TalentCard />
+        </div>
+    )
 }

@@ -1,0 +1,17 @@
+#PageHeader {
+   /* Page Header */
+
+    position: absolute;
+    width: 560px;
+    height: 45px;
+    left: 537px;
+    top: 60px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 877;
+    font-size: 50px;
+    line-height: 61px;
+
+    color: #FFFFFF; 
+}
