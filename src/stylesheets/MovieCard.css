@@ -1,0 +1,68 @@
+.MovieCardHolder {
+    /* Movie Item Holder */
+
+    position: absolute;
+    width: 800px;
+    height: 77px;
+
+    background: #8BA6C2;
+    border-radius: 25px;
+}
+
+.MovieCardImage {
+    /* Movie Icon */
+
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    left: 9px;
+    top: 6px;
+
+    border-radius: 720px;
+}
+
+.MovieCardTitle {
+    /* Movie Title */
+
+    position: absolute;
+    width: 499px;
+    height: 0px;
+    left: 90px;
+    top: -10px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 774;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #FFFFFF;
+}
+
+.MovieCardStatusText {
+    /* Status Text */
+
+    position: absolute;
+    width: 114px;
+    height: 0px;
+    left: 605px;
+    top: 12px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 774;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.MovieCardStatusImage {
+    /* Status Image */
+
+    position: absolute;
+    width: 40px;
+    height: 37px;
+    left: 730px;
+    top: 22px;
+
+    border-radius: 180px;
+}

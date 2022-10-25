@@ -2,6 +2,7 @@
     /* Talent Content Holder */
 
     position: absolute;
+    overflow: hidden;
     width: 950px;
     height: 95px;
     left: 550px;
@@ -93,4 +94,28 @@
     height: 25px;
     left: 895px;
     top: 38px;
+}
+
+.TalentContentHolderExtension {
+    /* Content Holder Extension */
+
+    position: absolute;
+    width: 857px;
+    height: 846px;
+    left: 110px;
+    top: 96px;
+
+    background: #4E6378;
+    border-radius: 25px;
+}
+
+.MovieCard {
+    /* Movie Item */
+    
+    position: relative;
+    width: 776px;
+    height: 77px;
+    left: 10px;
+    top: 10px;
+    margin-bottom: 7px;
 }
