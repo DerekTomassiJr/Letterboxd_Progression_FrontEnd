@@ -1,12 +1,10 @@
 .TalentContentHolder {
     /* Talent Content Holder */
 
-    position: absolute;
+    position: flex;
     overflow: hidden;
     width: 950px;
     height: 95px;
-    left: 550px;
-    top: 169px;
 
     background: #445566;
     border-radius: 25px;
@@ -18,8 +16,8 @@
     position: absolute;
     width: 87px;
     height: 85px;
-    left: 14px;
-    top: 5px;
+    margin-left: -29rem;
+    margin-top: 0.35rem;
 
     border-radius: 720px;
 }
@@ -30,8 +28,8 @@
     position: absolute;
     width: 495px;
     height: 45px;
-    left: 100px;
-    top: -20px;
+    margin-left: 5rem;
+    margin-top: 1.2rem;
 
     font-family: 'Inter';
     font-style: normal;
@@ -48,8 +46,8 @@
     position: absolute;
     width: 200px;
     height: 18px;
-    left: 613px;
-    top: 40.5px;
+    margin-left: 38rem;
+    margin-top: 2.531rem;
 
     background: #0A7700;
     border-radius: 25px;
@@ -61,8 +59,8 @@
     position: absolute;
     width: 180px;
     height: 18px;
-    left: 613px;
-    top: 40.5px;
+    margin-left: 38rem;
+    margin-top: 2.531rem;
 
     background: #14FF00;
     border-radius: 25px;
@@ -74,8 +72,8 @@
     position: absolute;
     width: 42px;
     height: 15px;
-    left: 829px;
-    top: 20px;
+    margin-left: 51.813rem;
+    margin-top: 2.35rem;
 
     font-family: 'Inter';
     font-style: normal;
@@ -92,18 +90,18 @@
     position: absolute;
     width: 26px;
     height: 25px;
-    left: 895px;
-    top: 38px;
+    margin-left: 26rem;
+    margin-top: 2.25rem;
 }
 
 .TalentContentHolderExtension {
     /* Content Holder Extension */
 
-    position: absolute;
+    position: flex;
     width: 857px;
     height: 846px;
-    left: 110px;
-    top: 96px;
+    margin-left: 6.875rem;
+    margin-top: 6rem;
 
     background: #4E6378;
     border-radius: 25px;

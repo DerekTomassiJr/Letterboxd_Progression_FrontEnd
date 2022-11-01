@@ -1,7 +1,8 @@
 .MovieCardHolder {
     /* Movie Item Holder */
 
-    position: absolute;
+    position: flex;
+    gap: 10px;
     width: 800px;
     height: 77px;
 
@@ -25,10 +26,11 @@
     /* Movie Title */
 
     position: absolute;
+    text-align: left;
     width: 499px;
     height: 0px;
-    left: 90px;
-    top: -10px;
+    margin-left: 6rem;
+    margin-top: 1.2rem;
 
     font-family: 'Inter';
     font-style: normal;

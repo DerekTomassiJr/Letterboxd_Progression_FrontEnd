@@ -1,11 +1,19 @@
+#DirectorPageContent {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
 #PageHeader {
    /* Page Header */
 
-    position: absolute;
+    position: flex;
     width: 560px;
     height: 45px;
-    left: 537px;
-    top: 60px;
+    margin-right: 25rem;
+    margin-top: 0.5rem;
 
     font-family: 'Inter';
     font-style: normal;
