@@ -1,0 +1,67 @@
+.HomeHeader {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 877;
+    font-size: 50px;
+    line-height: 61px;
+
+    color: #FFFFFF; 
+}
+
+.FormHolder {
+    position: flex;
+    width: 45rem;
+    height: 25rem;
+
+    background: #445566;
+    border-radius: 25px;
+}
+
+.HomeContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.InputHolder {
+    position: flex;
+    width: 35rem;
+    height: 15rem;
+    margin-top: 3rem;
+    margin-left: 5rem;
+
+    background: #4e6378;
+    border-radius: 25px;
+}
+
+.UploadImage {
+    height: 10rem;
+    width: 7rem;
+    margin-top: 1rem;
+}
+
+.InputField {
+    background-color: #8ba6c2;
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: 25px;
+}
+
+.ImportButton {
+    position: flex;
+    width: 15rem;
+    height: 3rem;
+    margin-top: 0rem;
+
+    font-family: 'Inter';
+    color: #FFFFFF;
+    background-color: #01b020;
+
+    border-radius: 25px;
+}
