@@ -5,6 +5,8 @@ import "../stylesheets/Home.css";
 const Home = () => {
   const [file, setFile] = useState();
   const [array, setArray] = useState([]);
+  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const movieArray = [];
 
   const fileReader = new FileReader();
@@ -41,6 +43,7 @@ const Home = () => {
     if (file) {
       fileReader.onload = function (event) {
         const text = event.target.result;
+        console.log(text);
         csvFileToArray(text);
       };
 
@@ -49,6 +52,33 @@ const Home = () => {
     getMovieNames(array);
 
     console.log(movieArray);
+    sendPostRequest();
+  };
+
+  const sendPostRequest = () => {
+    var userInfo = {
+      email: email,
+      username: username,
+      films: []
+    }
+    
+    for (var i = 0; i < movieArray.length; i++) {
+      userInfo.films.push(movieArray[i]);
+    }
+
+    if (userInfo.films.length > 0) {
+      fetch('http://localhost:9000', {
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(userInfo)
+      }).then(() => {
+        console.log("Sent User Info");
+      });
+    } else {
+      console.log("Empty films array will not send fetch request");
+    }
+
+    console.log(userInfo);
   };
 
   const headerKeys = Object.keys(Object.assign({}, ...array));
@@ -58,6 +88,14 @@ const Home = () => {
       <h1 className="HomeHeader">Import Letterboxd Data</h1>
       <div className="FormHolder">
         <form>
+            <label> Email: 
+              <input type='text' name='email' onChange={e => setEmail(e.target.value)} id="emailInput"/>
+            </label>
+            <br />
+            <label> Username: 
+              <input type='text' name='username' onChange={e => setUsername(e.target.value)} id="usernameInput"/>
+            </label>
+            
             <div className="InputHolder">
                 <img src={uploadIcon} className="UploadImage"></img>
                 
