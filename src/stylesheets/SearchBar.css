@@ -1,0 +1,19 @@
+.MovieSearchContainer {
+    position: float;
+    right: 100;
+}
+
+.MovieSearchInput {
+    background-color: #cae8ca;
+    border-radius:20px;
+    box-shadow: 0 0 15px 10px rgba(0,0,0,0.06);
+}
+.MovieSearchBtn {
+    border-radius: 20px;
+
+}
+
+.MovieSearchLabel {
+    border-radius: 20px;
+}
+
