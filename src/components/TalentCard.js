@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import PropTypes from 'prop-types'
 import "../stylesheets/TalentCard.css";
 import TarantinoPic from "../images/tarantino_headshot.png";
 import ExpandIcon from "../images/expand_icon.png";
@@ -15,7 +16,7 @@ import TheHateFulEightPoster from "../images/Movie_Posters/the-hateful-eight-pos
 import MovieCard from './MovieCard';
 
 
-export default function TalentCard() {
+const TalentCard = ({ directorName, directorImagePath, directorFilms }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const expandClick = () => {
@@ -23,9 +24,9 @@ export default function TalentCard() {
     }
     
     return ( 
-        <div style={{height: isExpanded ? "941px" : "",}} className="TalentContentHolder">
-            <img src={ TarantinoPic } alt="Tarantino Pic" className="TalentCardPicture"></img>
-            <h2 className="TalentCardHeader">Quentin Tarantino</h2>
+        <div style={{height: isExpanded ? "auto" : "",}} className="TalentContentHolder">
+            <img src={ directorImagePath } alt="Tarantino Pic" className="TalentCardPicture"></img>
+            <h2 className="TalentCardHeader">{ directorName }</h2>
             <div className="ProgressBarBackground"></div>
             <div className="ProgressBar"></div>
             <p className="CompletionRate">9/10</p>
@@ -36,76 +37,23 @@ export default function TalentCard() {
             onClick={expandClick}></img>
             {/* Expanded Items */}
             <div className="TalentContentHolderExtension">
-                <div className="MovieCard">
-                    <MovieCard 
-                    posterPath={OUATPoster}
-                    title="Once Upon a Time in Hollywood"
-                    isWatched={true}/>
-                </div>
-                
-                <div className="MovieCard">
-                    <MovieCard 
-                    posterPath={PulpFictionPoster}
-                    title="Pulp Fiction"
-                    isWatched={true}/>
-                </div>
-                
-                <div className="MovieCard">
-                    <MovieCard 
-                    posterPath={InglouriousBasterdsPoster}
-                    title="Inglourious Basterds"
-                    isWatched={true}/>
-                </div>
-
-                <div className="MovieCard">
-                    <MovieCard 
-                    posterPath={DjangoUnchainedPoster}
-                    title="Django Unchained"
-                    isWatched={true}/>
-                </div>
-
-                <div className="MovieCard">
-                    <MovieCard 
-                    posterPath={KillBillPoster}
-                    title="Kill Bill"
-                    isWatched={true}/>
-                </div>
-
-                <div className="MovieCard">
-                    <MovieCard 
-                    posterPath={KillBill2Poster}
-                    title="Kill Bill Vol.2"
-                    isWatched={true}/>
-                </div>
-
-                <div className="MovieCard">
-                    <MovieCard 
-                    posterPath={JackieBrownPoster}
-                    title="Jackie Brown"
-                    isWatched={true}/>
-                </div>
-
-                <div className="MovieCard">
-                    <MovieCard 
-                    posterPath={DeathProofPoster}
-                    title="Death Proof"
-                    isWatched={true}/>
-                </div>
-
-                <div className="MovieCard">
-                    <MovieCard 
-                    posterPath={ReservoirDogsPoster}
-                    title="Reservoir Dogs"
-                    isWatched={true}/>
-                </div>
-
-                <div className="MovieCard">
-                    <MovieCard 
-                    posterPath={TheHateFulEightPoster}
-                    title="The Hateful Eight"
-                    isWatched={false}/>
-                </div>
+                {directorFilms.map(dF => 
+                    <div className="MovieCard">
+                       <MovieCard 
+                        posterPath = {dF.image}
+                        title = {dF.title}
+                        isWatched={true}/> 
+                    </div>    
+                )}
             </div>
         </div>
     )
 }
+
+MovieCard.propTypes = {
+    directorName: PropTypes.string,
+    directorImagePath: PropTypes.string,
+    directorFilms: PropTypes.object,
+}
+
+export default TalentCard

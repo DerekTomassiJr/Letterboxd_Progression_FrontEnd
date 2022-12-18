@@ -5,6 +5,7 @@
     overflow: hidden;
     width: 950px;
     height: 95px;
+    margin-bottom: 0.5rem;
 
     background: #445566;
     border-radius: 25px;
@@ -99,7 +100,8 @@
 
     position: flex;
     width: 857px;
-    height: 846px;
+    height: auto;
+    padding-bottom: 10px;
     margin-left: 6.875rem;
     margin-top: 6rem;
 
@@ -112,7 +114,7 @@
     
     position: relative;
     width: 776px;
-    height: 77px;
+    height: 5rem;
     left: 10px;
     top: 10px;
     margin-bottom: 7px;
