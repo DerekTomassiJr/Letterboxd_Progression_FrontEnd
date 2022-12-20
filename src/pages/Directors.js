@@ -39,15 +39,18 @@ export default function Home() {
     const [directorInfo, setDirectorInfo] = useState([])    
 
     useEffect(() => {
-        axios.get('http://localhost:9000/directorPageAPI')
-        .then(res => res.data.Directors)
-        .then(json => {
-            console.log(json);
-            setDirectorInfo(json);
+        var userInfo = {
+            email: "derektomassi@me.com"
+        }
+
+        axios.post('http://localhost:9000/directorPageAPI', userInfo)
+        .then((res) => {
+            console.log(res.data.Directors);
+            setDirectorInfo(res.data.Directors);
         })
-        .catch(err => {
+        .catch((err) => {
             console.log(err);
-        })
+        });
     }, []);
 
     return (
